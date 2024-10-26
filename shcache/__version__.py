@@ -1,0 +1,7 @@
+__author__ = "Teng Yiming"
+__author_email__ = "teng.yiming@zte.com.cn"
+__description__ = "gpt cache"
+__license__ = "MIT License"
+__title__ = "shcache"
+__url__ = "https://github.com/ai-shflow/shcache"
+__version__ = "1.0.0"
