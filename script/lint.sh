@@ -1,6 +1,6 @@
 #!/bin/bash
 
-list="shcache"
+list="shcache,tests"
 
 old=$IFS IFS=$','
 for item in $list; do
