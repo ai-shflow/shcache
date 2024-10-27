@@ -21,6 +21,8 @@
 ## Run
 
 ```bash
+pip install -Ur requirements.txt
+python cache.py --config-file="tests/data/config.yml" --listen-url="127.0.0.1:8080"
 ```
 
 
@@ -29,7 +31,7 @@
 
 ```bash
 docker build -f Dockerfile -t ai-shflow/shcache:latest .
-docker run ai-shflow/shcache:latest
+docker run ai-shflow/shcache:latest ./shcache --config-file="config.yml" --listen-url="127.0.0.1:8080"
 ```
 
 
@@ -37,6 +39,17 @@ docker run ai-shflow/shcache:latest
 ## Usage
 
 ```
+usage: cache.py [-h] --config-file CONFIG_FILE --listen-url LISTEN_URL [-v]
+
+gpt cache
+
+options:
+  -h, --help            show this help message and exit
+  --config-file CONFIG_FILE
+                        config file (.yml)
+  --listen-url LISTEN_URL
+                        listen url (host:port)
+  -v, --version         show program's version number and exit
 ```
 
 
@@ -60,7 +73,7 @@ Project License can be found [here](LICENSE).
 
 ## Reference
 
- [gptcache - modules](https://gptcache.readthedocs.io/en/latest/index.html#modules)
+- [gptcache - modules](https://gptcache.readthedocs.io/en/latest/index.html#modules)
 
 - [gptcache - server](https://github.com/zilliztech/GPTCache/tree/main/examples#How-to-use-GPTCache-server)
 

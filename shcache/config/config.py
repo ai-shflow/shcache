@@ -16,10 +16,7 @@ class ConfigException(Exception):
 class Config(object):
     def __init__(self):
         self._config_file = None
-        self._lint_name = ""
-        self._lint_project = ""
         self._listen_url = ""
-        self._output_file = ""
 
     @property
     def config_file(self):
@@ -38,3 +35,13 @@ class Config(object):
             self._config_file = yaml.load(file, Loader=yaml.FullLoader)
         if self._config_file is None:
             raise ConfigException("config invalid")
+
+    @property
+    def listen_url(self):
+        return self._listen_url
+
+    @listen_url.setter
+    def listen_url(self, url):
+        if not isinstance(url, str):
+            raise ConfigException("url invalid")
+        self._listen_url = url.strip()

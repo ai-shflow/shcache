@@ -1,5 +1,5 @@
-__author__ = "Teng Yiming"
-__author_email__ = "teng.yiming@zte.com.cn"
+__author__ = "Jia Jia"
+__author_email__ = "angersax@sina.com"
 __description__ = "gpt cache"
 __license__ = "MIT License"
 __title__ = "shcache"
